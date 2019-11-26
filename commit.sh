@@ -6,6 +6,8 @@ cp ~/.config/i3/config i3
 cp ~/.Xresources Xresources
 cp ~/.vimrc vimrc
 cp ~/Images/Wallpapers/* Wallpapers/
+cp ~/.config/i3blocks/config  i3blocks
+cp ~/Scripts Scripts
 
 # Add changes
 
