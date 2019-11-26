@@ -1,0 +1,18 @@
+
+# XF86 Buttons for the think pad T440P
+# In order from left to right
+
+XF86AudioMute
+XF86AudioLowerVolume
+XF86AudioRaiseVolume
+XF86AudioMicMute
+
+XF86MonBrightnessDown
+XF86MonBrightnessUp
+XF86Display
+XF86WLAN
+
+XF86Tools
+XF86Seach
+XF86LaunchA
+XF86Explorer

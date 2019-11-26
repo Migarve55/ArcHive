@@ -187,16 +187,22 @@ bar {
         status_command i3status
 }
 
-# Volume control
+# XF86 Keys controls 
 
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
-
-# Brightness control
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
+bindsym XF86AudioMicMute exec "amixer -q sset Capture,0 toggle"
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+# bindsym XF86Display
+# bindsym XF86WLAN
+
+# bindsym XF86Tools
+# bindsym XF86Search
+  bindsym XF86LaunchA exec urxvt -e cmus
+# bindsym XF86Explorer
 
 # For picom
 

@@ -1,6 +1,4 @@
-xorg
-i3
-rxvt-terminal
+rxvt-unicode
 dmenu
 feh
 ranger
@@ -11,8 +9,10 @@ man-db
 man-pages
 network-manager-applet
 alsa-utils
+pulseaudio
+pulseaudio-alsa
 firefox
 unzip
-untar
 htop
 neofetch
+xf86-video-intel
