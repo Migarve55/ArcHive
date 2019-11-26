@@ -22,13 +22,18 @@ gaps outer 5
 
 #for_window [class=".*"] border pixel 1
 
-# Borders col     border  back    text    indic   cb
-client.focused    #000000 #222222 #888888 #222222 #000000
-client.unfocused  #000000 #111111 #666666 #222222 #000000
+# Borders col           border  back    text    indic   cb
+client.focused          #000000 #333333 #888888 #222222 #000000
+client.focused_inactive #000000 #111111 #666666 #222222 #000000
+client.unfocused   		#000000 #111111 #666666 #222222 #000000
+client.urgent      		#000000 #111111 #666666 #900000 #900000
+client.placeholder 		#000000 #111111 #666666 #000000 #000000
+
+focus_follows_mouse no
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -190,8 +195,8 @@ bar {
 # XF86 Keys controls 
 
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 10%- unmute"
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 10%+ unmute"
 bindsym XF86AudioMicMute exec "amixer -q sset Capture,0 toggle"
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
@@ -199,23 +204,21 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 # bindsym XF86Display
 # bindsym XF86WLAN
 
-# bindsym XF86Tools
-# bindsym XF86Search
-  bindsym XF86LaunchA exec urxvt -e cmus
-# bindsym XF86Explorer
+# Adapted for cmus control (Open, Play/Stop, << >>)
 
-# For picom
-
-exec --no-startup-id picom -b
+  bindsym XF86Tools exec urxvt -e cmus
+  bindsym XF86Search exec "cmus-remote -u"
+  bindsym XF86LaunchA exec "cmus-remote -r"
+  bindsym XF86Explorer exec "cmus-remote -n"
 
 # Extra keybingings for apps
 
 bindsym $mod+g exec urxvt -e ranger
 
-# Wallpapers
+# Start up
 
+exec --no-startup-id picom -b
 exec_always --no-startup-id feh --bg-scale --randomize /home/miguel/Images/Wallpapers
-
-# Keyboard mapping
-
 exec --no-startup-id setxkbmap es
+exec --no-startup-id amixer
+
