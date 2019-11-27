@@ -1,35 +1,34 @@
 
-command=~/Scripts/i3blocks/$BLOCK_NAME
+command=~/scripts/i3blocks/$BLOCK_NAME
 
 [music]
-interval=5
+label=🎵 
+interval=1
+#signal=11
 color=#44FF22
-
-[separator]
 
 [weather]
 interval=3600
-color=#A4C9F4
+color=#03D3FC
 
-[separator]
+[vol]
+signal=10
+interval=once
 
 [cpu]
-label=CPU: 
+label=⚡ 
 T_WARN=50
 T_CRIT=85
 interval=10
 
 [memory]
-label=RAM: 
+label=💾 
 instance=mem
 interval=10
 
 [battery]
-LABEL=BAT: 
 #BAT_NUMBER=0
 interval=10
-
-[separator]
 
 [time]
 command=date +"%T %D"

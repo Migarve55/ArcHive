@@ -191,6 +191,7 @@ bindsym $mod+r mode "resize"
 bar {
 	position top
 	status_command i3blocks
+	font pango: monospace 10
 }
 
 # XF86 Keys controls 
@@ -205,12 +206,23 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 # bindsym XF86Display
 # bindsym XF86WLAN
 
+# XF86 Signals for Audio
+
+bindsym --release XF86AudioMute exec pkill -SIGRTMIN+10 i3blocks
+bindsym --release XF86AudioLowerVolume exec pkill -SIGRTMIN+10 i3blocks
+bindsym --release XF86AudioRaiseVolume exec pkill -SIGRTMIN+10 i3blocks
+
 # Adapted for cmus control (Open, Play/Stop, << >>)
 
-  bindsym XF86Tools exec urxvt -e cmus
-  bindsym XF86Search exec "cmus-remote -u"
-  bindsym XF86LaunchA exec "cmus-remote -r"
-  bindsym XF86Explorer exec "cmus-remote -n"
+bindsym XF86Tools exec urxvt -e cmus
+bindsym XF86Search exec "cmus-remote -u"
+bindsym XF86LaunchA exec "cmus-remote -r"
+bindsym XF86Explorer exec "cmus-remote -n"
+
+# XF86 Signlas for cmus
+
+bindsym --release XF86AudioLaunchA exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release XF86AudioExplorer exec pkill -SIGRTMIN+11 i3blocks
 
 # Extra keybingings for apps
 
