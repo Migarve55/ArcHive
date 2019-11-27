@@ -219,8 +219,9 @@ bindsym XF86Search exec "cmus-remote -u"
 bindsym XF86LaunchA exec "cmus-remote -r"
 bindsym XF86Explorer exec "cmus-remote -n"
 
-# XF86 Signlas for cmus
+# XF86 Signals for cmus
 
+bindsym --release XF86AudioSearch exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release XF86AudioLaunchA exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release XF86AudioExplorer exec pkill -SIGRTMIN+11 i3blocks
 
