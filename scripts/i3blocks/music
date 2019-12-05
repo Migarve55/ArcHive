@@ -1,0 +1,25 @@
+#!/bin/sh
+
+if cmus-remote -Q | grep -q "not running";
+then   
+	exit 0
+fi
+
+SONG=$(cmus-remote -Q | grep title | cut -c 11-)
+ARTIST=$(cmus-remote -Q | grep "set artist" | head -1 | cut -c 12-)
+ST=$(cmus-remote -Q | head -1 | cut -f2 -d" " | sed 's/.*/\u&/')
+
+if [ ! -z "$SONG" ] && [ ! -z "$ARTIST" ]
+then
+	echo "$ST $SONG - $ARTIST"
+fi
+
+if [ ! -z "$SONG" ] && [ -z "$ARTIST" ]
+then
+	echo "$ST $SONG"
+fi
+
+if [ -z "$SONG" ] && [ ! -z "$ARTIST" ]
+then
+	echo "$ST $ARTIST"
+fi
