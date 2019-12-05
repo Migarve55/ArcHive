@@ -18,7 +18,7 @@ interval=once
 [cpu]
 label=⚡ 
 T_WARN=50
-T_CRIT=85
+T_CRIT=10
 interval=10
 
 [memory]

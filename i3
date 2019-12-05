@@ -203,7 +203,7 @@ bindsym XF86AudioMicMute exec "amixer -q sset Capture,0 toggle"
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
-# bindsym XF86Display
+bindsym XF86Display exec ~/scripts/capture.sh
 # bindsym XF86WLAN
 
 # XF86 Signals for Audio
@@ -232,7 +232,7 @@ bindsym $mod+g exec urxvt -e ranger
 # Start up
 
 exec --no-startup-id picom -b
-exec_always --no-startup-id feh --bg-scale --randomize /home/miguel/Images/Wallpapers
+exec_always --no-startup-id feh --bg-scale --randomize /home/miguel/images/wallpapers
 exec --no-startup-id setxkbmap es
 exec --no-startup-id amixer
 

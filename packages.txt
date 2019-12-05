@@ -1,4 +1,5 @@
 rxvt-unicode
+xorg
 dmenu
 feh
 ranger
