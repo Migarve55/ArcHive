@@ -2,6 +2,23 @@ theme = "solarized-dark"
 icons = "awesome"
 
 [[block]]
+block = "weather"
+format = "{weather} ({location}) {temp}°, {wind} m/s {direction}"
+service = { name = "openweathermap", api_key = "47b790fd0fc41878c80c57c9846132cb", city_id = "3114711", units = "metric" }
+
+[[block]]
+block = "music"
+player = "spotify"
+buttons = ["play", "next"]
+
+[[block]]
+block = "temperature"
+collapsed = false
+interval = 10
+format = "{min}° min, {max}° max, {average}° avg"
+chip = "*-isa-*"
+
+[[block]]
 block = "disk_space"
 path = "/"
 alias = "/"
@@ -28,6 +45,11 @@ format = "{1m}"
 
 [[block]]
 block = "sound"
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage}% {time}"
 
 [[block]]
 block = "time"
