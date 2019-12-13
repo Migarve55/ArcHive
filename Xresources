@@ -1,4 +1,4 @@
-#urxvt*font:            xft:Terminus:size=10
+!#urxvt*font:            xft:Terminus:size=10
 urxvt*font:             xft:Bitstream Vera Sans Mono:size=12
 urxvt*termName:         rxvt
 urxvt*background:       rgba:0000/0000/0000/cccc

@@ -31,5 +31,5 @@ interval=10
 interval=10
 
 [time]
-command=date +"%T %D"
+command=date +"%T %d/%m/%y"
 interval=5
