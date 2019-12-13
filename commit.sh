@@ -3,6 +3,7 @@
 # Copy files
 
 cp ~/.config/i3/config i3
+cp ~/.config/i3/status.toml i3status-rs-conf
 cp ~/.Xresources Xresources
 cp ~/.vimrc vimrc
 cp -r ~/images/wallpapers/* Wallpapers/

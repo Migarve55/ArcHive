@@ -190,8 +190,17 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	position top
-	status_command i3blocks
-	font pango: monospace 10
+	status_command i3status-rs ~/.config/i3/status.toml
+	font pango:DejaVu Sans Mono, FontAwesome 10
+	colors {
+		separator #666666
+        background #222222
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+	}
 }
 
 # XF86 Keys controls 
