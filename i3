@@ -21,6 +21,8 @@ gaps outer 5
 # Border configuration
 
 #for_window [class=".*"] border pixel 1
+for_window [class="^.*"] border pixel 1
+new_window 1pixel
 
 # Borders col           border  back    text    indic   cb
 client.focused          #000000 #333333 #888888 #222222 #000000
