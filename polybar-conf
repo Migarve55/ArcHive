@@ -30,11 +30,11 @@ alert = #bd2c40
 [bar/mybar]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
-fixed-center = false
+;radius = 6.0
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = xbacklight pulseaudio temperature memory cpu wlan eth battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -80,10 +80,6 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
@@ -208,7 +204,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
-label = %percentage:2%%
+label = "CPU: %percentage:2%%"
 
 [module/memory]
 type = internal/memory
@@ -216,7 +212,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label = %percentage_used%%
+label = "RAM: %percentage_used%%"
 
 [module/wlan]
 type = internal/network
@@ -417,7 +413,7 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini
