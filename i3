@@ -188,11 +188,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Modified to not show up
 bar {
 	position top
-	status_command i3status-rs ~/.config/i3/status.toml
+	mode invisible
+	# status_command i3status-rs ~/.config/i3/status.toml
 	font pango:DejaVu Sans Mono, FontAwesome 10
 	colors {
 		separator #666666
@@ -242,8 +242,9 @@ bindsym $mod+g exec urxvt -e ranger
 
 # Start up
 
-exec --no-startup-id picom -b
-exec_always --no-startup-id feh --bg-scale --randomize /home/miguel/images/wallpapers
 exec --no-startup-id setxkbmap es
+exec --no-startup-id picom -b
 exec --no-startup-id amixer
-
+# exec_always --no-startup-id feh --bg-scale --randomize /home/miguel/images/wallpapers
+exec_always --no-startup-id wal -i ~/images/wallpapers
+exec_always --no-startup-id ~/.config/polybar/launch.sh

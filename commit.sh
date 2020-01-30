@@ -4,6 +4,8 @@
 
 cp ~/.config/i3/config i3
 cp ~/.config/i3/status.toml i3status-rs-conf
+cp ~/.config/polybar/config polybar-conf
+cp ~/.config/polybar/launch.sh launch.sh
 cp ~/.Xresources Xresources
 cp ~/.vimrc vimrc
 cp -r ~/images/wallpapers/* Wallpapers/
