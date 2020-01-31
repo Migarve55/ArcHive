@@ -238,7 +238,11 @@ bindsym --release XF86AudioExplorer exec pkill -SIGRTMIN+11 i3blocks
 
 # Extra keybingings for apps
 
-bindsym $mod+g exec urxvt -e ranger
+bindsym $mod+g exec --no-startup-id urxvt -e ranger
+
+# PyWal
+
+bindsym $mod+c exec --no-startup-id wal -i ~/images/wallpapers
 
 # Start up
 
@@ -246,5 +250,5 @@ exec --no-startup-id setxkbmap es
 exec --no-startup-id picom -b
 exec --no-startup-id amixer
 # exec_always --no-startup-id feh --bg-scale --randomize /home/miguel/images/wallpapers
-exec_always --no-startup-id wal -i ~/images/wallpapers
+exec --no-startup-id wal -R
 exec_always --no-startup-id ~/.config/polybar/launch.sh

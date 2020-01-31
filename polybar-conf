@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #aa111111
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -35,6 +35,7 @@ height = 30
 ;offset-y = 1%
 ;radius = 6.0
 fixed-center = true
+padding = 0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -42,7 +43,7 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 4
+border-size = 0
 border-color = #00000000
 
 padding-left = 0
@@ -54,10 +55,11 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
+font-3 = FontAwesome:size=10;0
 
-modules-left = bspwm i3
-modules-center = mpd
-modules-right = xbacklight pulseaudio temperature memory cpu wlan eth battery date powermenu
+modules-left = powermenu i3
+;modules-center = 
+modules-right = xbacklight pulseaudio temperature memory cpu wlan eth battery date 
 
 tray-position = right
 tray-padding = 2
@@ -188,7 +190,7 @@ bar-indicator-foreground = #fff
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
-bar-fill-foreground = #9f78e1
+bar-fill-foreground = #dadada
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
@@ -203,7 +205,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = #dadada
 label = "CPU: %percentage:2%%"
 
 [module/memory]
@@ -211,7 +213,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = #dadada
 label = "RAM: %percentage_used%%"
 
 [module/wlan]
@@ -220,7 +222,7 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+format-connected-underline = #dadada
 label-connected = %essid%
 
 format-disconnected =
@@ -241,7 +243,7 @@ type = internal/network
 interface = enp0s25
 interval = 3.0
 
-format-connected-underline = #55aa55
+format-connected-underline = #dadada
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -264,7 +266,7 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = #dadada
 
 label = %date% %time%
 
@@ -330,7 +332,7 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = #dadada
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
@@ -362,7 +364,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
+format-underline = #dadada
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
@@ -413,7 +415,7 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 0
+;margin-top = 0
 margin-bottom = 0
 
 ; vim:ft=dosini

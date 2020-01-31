@@ -19,7 +19,7 @@ Xft*hinting:            full
 
 urxvt.transparent:   true
 urxvt.tintColor:     white
-urxvt.shading:       20 
+urxvt.shading:       35 
  
 !Colores extra
 
