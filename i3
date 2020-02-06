@@ -246,6 +246,7 @@ bindsym $mod+c exec --no-startup-id wal -i ~/images/wallpapers
 
 # Start up
 
+exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id setxkbmap es
 exec --no-startup-id picom -b
 exec --no-startup-id amixer

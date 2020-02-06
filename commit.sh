@@ -2,6 +2,9 @@
 
 # Copy files
 
+cp ~/.profile profile
+cp ~/.zshrc zshrc
+cp ~/.xinitrc xinitrc
 cp ~/.config/i3/config i3
 cp ~/.config/i3/status.toml i3status-rs-conf
 cp ~/.config/polybar/config polybar-conf

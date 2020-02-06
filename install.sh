@@ -14,6 +14,9 @@ mkdir -p ~/scripts
 
 # Copy files
 
+cp profile ~/.profile
+cp zshrc ~/.zshrc	
+cp xinitrc ~/.xinitrc
 cp i3 ~/.config/i3/config
 cp i3status-rs-config ~/.config/i3/status.toml
 cp polybar-conf ~/.config/polybar/config
