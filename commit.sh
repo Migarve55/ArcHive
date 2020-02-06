@@ -2,7 +2,7 @@
 
 # Copy files
 
-cp ~/.profile profile
+cp ~/.zprofile zprofile
 cp ~/.zshrc zshrc
 cp ~/.xinitrc xinitrc
 cp ~/.config/i3/config i3

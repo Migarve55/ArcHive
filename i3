@@ -50,7 +50,6 @@ font pango:monospace 9
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -207,21 +206,15 @@ bar {
 
 # XF86 Keys controls 
 
-bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 10%- unmute"
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 10%+ unmute"
-bindsym XF86AudioMicMute exec "amixer -q sset Capture,0 toggle"
+bindsym XF86AudioMute exec --no-startup-id "amixer -q sset Master,0 toggle"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q sset Master,0 10%- unmute"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q sset Master,0 10%+ unmute"
+bindsym XF86AudioMicMute exec --no-startup-id "amixer -q sset Capture,0 toggle"
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
-bindsym XF86Display exec ~/scripts/capture.sh
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
+bindsym XF86Display exec --no-startup-id ~/scripts/capture.sh
 # bindsym XF86WLAN
-
-# XF86 Signals for Audio
-
-bindsym --release XF86AudioMute exec pkill -SIGRTMIN+10 i3blocks
-bindsym --release XF86AudioLowerVolume exec pkill -SIGRTMIN+10 i3blocks
-bindsym --release XF86AudioRaiseVolume exec pkill -SIGRTMIN+10 i3blocks
 
 # Adapted for cmus control (Open, Play/Stop, << >>)
 
@@ -229,12 +222,6 @@ bindsym XF86Tools exec urxvt -e cmus
 bindsym XF86Search exec "cmus-remote -u"
 bindsym XF86LaunchA exec "cmus-remote -r"
 bindsym XF86Explorer exec "cmus-remote -n"
-
-# XF86 Signals for cmus
-
-bindsym --release XF86AudioSearch exec pkill -SIGRTMIN+11 i3blocks
-bindsym --release XF86AudioLaunchA exec pkill -SIGRTMIN+11 i3blocks
-bindsym --release XF86AudioExplorer exec pkill -SIGRTMIN+11 i3blocks
 
 # Extra keybingings for apps
 
@@ -250,6 +237,7 @@ exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id setxkbmap es
 exec --no-startup-id picom -b
 exec --no-startup-id amixer
-# exec_always --no-startup-id feh --bg-scale --randomize /home/miguel/images/wallpapers
 exec --no-startup-id wal -R
+
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id nm-applet
