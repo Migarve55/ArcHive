@@ -1,5 +1,5 @@
-urxvt*font:             xft:Bitstream Vera Sans Mono:size=12
-!urxvt*font:             xft:Hack Font Mono:size=12
+;urxvt*font:             xft:Hack:size=12, xft:Symbola:size=12, xft:FontAwesome:size=12
+urxvt*font:             xft:Hack:size=12, xft:FontAwesome:size=12, xft:Symbola:size=12
 urxvt*termName:         rxvt
 urxvt*background:       rgba:0000/0000/0000/cccc
 urxvt*foreground:       #dadada
