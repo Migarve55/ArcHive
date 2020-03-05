@@ -9,3 +9,4 @@ network-manager-applet
 alsa-utils
 pulseaudio
 pulseaudio-alsa
+zsh
