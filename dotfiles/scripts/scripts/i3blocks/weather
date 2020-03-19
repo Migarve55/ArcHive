@@ -1,0 +1,45 @@
+#!/bin/sh 
+
+exit 0
+STR=$(curl -Ss 'https://wttr.in?0&T&Q')
+
+if [ -z "$STR" ];
+then
+	exit 0  
+fi
+
+WEATHER=$(echo "$STR" | cut -c 16- | head -1)
+TEMP=$(echo "$STR"  | cut -c 16-21 | head -2 | tail -1 | sed 's/\.\./ºC - /')
+
+# ⛅⛈️
+TS="?"
+if echo "$WEATHER" | grep -q "Sunny";
+then
+    TS="🌞"
+fi
+if echo "$WEATHER" | grep -q "Cloudy";
+then
+    TS="🌥️"
+fi
+if echo "$WEATHER" | grep -q "Partly cloudy";
+then
+    TS="🌤️"
+fi
+if echo "$WEATHER" | grep -q "Patchy";
+then
+    TS="🌦️"
+fi
+if echo "$WEATHER" | grep -q "Rain";
+then
+    TS="🌧️"
+fi
+if echo "$WEATHER" | grep -q "Snowy";
+then
+    TS="🌨️"
+fi
+if echo "$WEATHER" | grep -q "thunder";
+then
+    TS="🌩️"
+fi
+
+echo "$TS $WEATHER 🌡️$TEMPºC"
