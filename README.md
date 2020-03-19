@@ -1,19 +1,14 @@
 
 # Repository with Arch config files
 
-This repo includes two scripts:
+## Scripts
 
 * install.sh Configs the home to adjust the look and feel
-* commit.sh Saves all changes to the repo
+* config.sh  Restores repo dotfiles
+* commit.sh  Saves all changes to the repo
 
-## Vim
+## Structure
 
-Vim editor configuration
-
-## i3
-
-i3wm configuration
-
-## .Xresources
-
-The config for the terminal
+* dotfiles
+* images
+* scripts
